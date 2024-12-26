@@ -532,3 +532,14 @@ h3, p {
     font-size: 0.5rem;
   }
 }
+
+@media (max-width: 768px) {
+  #profile {
+    margin-bottom: 2rem; /* Reduce space for mobile */
+  }
+
+  #about {
+    margin-top: 0.5rem;  /* Reduce space for mobile */
+    padding-top: 1rem;   /* Adjust padding as needed */
+  }
+}
