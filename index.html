@@ -10,7 +10,7 @@
   </head>
   <body>
     <nav id="desktop-nav">
-  <div class="logo">Afolayan Tim</div>
+  <div class="logo">Tim's Portfolio</div>
   <div>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
@@ -22,7 +22,7 @@
 </nav>
 
     <nav id="hamburger-nav">
-      <div class="logo">Afolayan Tim</div>
+      <div class="logo">Tim's Portfolio</div>
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
           <span></span>
@@ -31,8 +31,8 @@
         </div>
         <div class="menu-links">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#my-projects" onclick="toggleMenu()">Projects</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
      
       </div>
@@ -40,21 +40,20 @@
 <section id="profile">
   <div class="section__pic-container">
     <!-- Make the image clickable -->
-    <a href="#" onclick="return false;">
-      <img src="./assets/tim3.jpg" alt="Tim's profile picture" class="profile-img" />
+    <a href="./assets/tim3.jpg" target="_blank" onclick="return true;">
+      <img src="./assets/tim3.jpg" alt="Tim's profile picture" class="profile-img"  />
     </a>
   </div>
 
   <div class="section__text">
-    <p class="section__text__p1">Hello, I'm</p>
-    <h1 class="title">Afolayan Tim</h1>
+    <h1 class="title">Afolayan Oluwatimilehin Israel</h1>
     <p class="section__text__p2">
       <span id="typing-text"></span>
     </p>
     <div class="btn-container">
       <button
         class="btn btn-color-2"
-        onclick="window.open('./assets/Afolayan Timilehin CV.pdf')"
+        onclick="window.open('assets/Afolayan Timilehin CV.PDF')"
       >
         Download CV
       </button>
@@ -277,7 +276,7 @@
           </a>
         </div>
         <h2 class="projects__subtitle">Smart Fan System</h2>
-        <p class="projects__description">It is a web-based control system for a smart fan using HTML, CSS, and JavaScript. I implemented manual and voice control functionalities for turning the fan on/off and adjusting speed. The system is designed to improve user comfort by enabling remote control of fan settings via both manual and voice commands. This project demonstrates the integration of web technologies with smart devices, offering users more control over their environment.</p>
+        <p class="projects__description">This project was developed as my Third year project at Cavendish University Uganda. It is a web-based control system for a smart fan using HTML, CSS, and JavaScript. I implemented manual and voice control functionalities for turning the fan on/off and adjusting speed. The system is designed to improve user comfort by enabling remote control of fan settings via both manual and voice commands. This project demonstrates the integration of web technologies with smart devices, offering users more control over their environment.</p>
         <div class="projects__button-container">
           <button class="projects__button" onclick="window.open('https://github.com/timilehin07', '_blank')">Github</button>
         </div>
@@ -331,7 +330,7 @@
       <nav>
         <div class="nav-links-container" >
           <ul class="nav-links">
-            <li><a href="#desktop-nav">Home</a></li>
+            <li><a href="#hamburger-nav">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Skills</a></li>
             <li><a href="#my-projects">Projects</a></li>
