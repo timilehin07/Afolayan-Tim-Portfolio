@@ -7,8 +7,7 @@
   padding: 0;
 }
 
-body {
-  font-family: "Poppins", sans-serif;
+body {font-family: "Poppins", sans-serif;
 }
 
 html {
@@ -202,30 +201,32 @@ section {
 
 /* Typing effect text */
 #typing-text {
-  font-weight: bold;
-  font-size: 1.75rem;
+  font-weight: 3.0rem;
+  font-size: 1.1rem;
   color: #333;
   display: inline-block; /* Ensures it stays inline with other elements */
 }
 
-/* Styling for section text */
-.section__text p {
-  font-weight: 600;
-}
 
-.section__text__p1 {
-  text-align: center;
-}
 
+/* Styling for the titles (below the main name) */
 .section__text__p2 {
-  font-size: 1.75rem;
+  font-size: 1.0rem;      /* Adjust size for better distinction */
+  color: #555;           /* Use a subtle gray color to contrast */
+  font-style: italic;    /* Optional: Add an italic style for emphasis */
+  text-transform: none;  /* Ensure no unnecessary capitalization */
+  margin-top: 1rem;    /* Add space from the main title */
   margin-bottom: 1rem;
 }
+
+
 
 /* Title styling */
 .title {
   font-size: 1rem;
   text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 /* Social icons container */
@@ -300,7 +301,8 @@ section {
 body {
     background-color: #f4f4f4;
     color: #333;
-}
+  }
+    
 
 /* About Section Styling */
 #about {
@@ -669,8 +671,6 @@ body {
 
 
 
-
-
 /* Making the project images responsive */
 .projects__image {
   width: 100%; /* Stretch image to fill the width of the container */
@@ -726,47 +726,6 @@ body {
   justify-content: center;
   margin-top: 10px;
 }
-
-
-
-
-/* Project Row - 2 projects per row */
-.projects__row {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  width: 100%;
-}
-
-/* Ensuring a gap between rows */
-.projects__container > .projects__row:not(:last-child) {
-  margin-bottom: 20px;
-}
-/* Each project item */
-.projects__item {
-  width: calc(50% - 10px); /* Two items per row, 10px gap between */
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-  margin-bottom: 20px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 750px; /* <-- Set a consistent height for all project items */
-  overflow: hidden; /* To handle content overflow */
-}
-
-
-
-
-
-
-
-
 
 
 
