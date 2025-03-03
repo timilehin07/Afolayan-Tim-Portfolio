@@ -18,7 +18,7 @@ window.onscroll = function() {
 };
 
 
-const roles = ["Software Engineer", "Front-End Web Developer", "Tech Enthusiast"]; // Add more roles here
+const roles = ["Software Engineer", "AI-Engineer", "ML-Engineer", "Tech Enthutiast"]; // Add more roles here
 const typingTextElement = document.getElementById("typing-text");
 let roleIndex = 0;
 let charIndex = 0;
