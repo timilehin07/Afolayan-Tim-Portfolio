@@ -64,6 +64,9 @@ body {
   footer {
     height: 40vh;
   }
+  .article-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row on medium screens */
+  }
   #profile {
     height: 83vh;
     margin-bottom: 0;
