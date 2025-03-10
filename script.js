@@ -114,3 +114,9 @@ function jumpToSlide(index) {
   updateSliderPosition();
 }
 
+function toggleMenu() {
+  const menu = document.querySelector('.menu-links');
+  menu.classList.toggle('active'); // Toggle the visibility of the menu
+}
+
+
