@@ -361,6 +361,7 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+  
 }
 
 /* Box Style for Experience and Education */
@@ -372,11 +373,16 @@ body {
     padding: 20px;
     width: 48%;
     display: flex;
+    flex: 1; /* Ensures both boxes take equal width */
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Initial box shadow */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+    justify-content: space-between;
+    min-height: 100%; /* Makes both sections equal in height */
+    padding: 20px;
+    background-color: white; /* Adjust background if necessary */
+    border-radius: 10px; /* Optional: Gives rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+  
 }
 
 /* Hover effect for Experience, Education, and About Text Boxes */
