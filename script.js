@@ -120,3 +120,19 @@ function toggleMenu() {
 }
 
 
+
+
+window.onload = function () {
+    let boxes = document.querySelectorAll(".about__details-container-box");
+
+    let maxHeight = 0;
+    boxes.forEach(box => {
+        maxHeight = Math.max(maxHeight, box.offsetHeight);
+    });
+
+    boxes.forEach(box => {
+        box.style.height = maxHeight + "px";
+    });
+};
+
+
