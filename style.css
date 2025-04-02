@@ -290,22 +290,7 @@ section {
 
 
 
-/* ABOUT SECTION *//* Reset some default styles */
-/* Reset some default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Overall styling */
-body {
-    background-color: #f4f4f4;
-    color: #333;
-  }
-    
-
-/* About Section Styling */
+//* About Section Styling */
 #about {
     padding: 50px;
     background-color: #fff;
@@ -320,12 +305,14 @@ body {
     font-size: 0.9rem;
     color: #888;
     text-align: center;
+    margin-bottom: 5px;
 }
 
 .about__title {
     font-size: 2.5rem;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 0;
+    margin-bottom: 20px;
     color: #333;
 }
 
@@ -334,7 +321,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: 30px;
+    margin-top: 20px;
+    gap: 20px;
 }
 
 /* Picture Container */
@@ -349,6 +337,7 @@ body {
     width: 100%;
     height: auto;
     border-radius: 5px;
+    object-fit: cover;
 }
 
 /* Details Container (Experience & Education) */
@@ -361,60 +350,25 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 20px;
-  
 }
 
 /* Box Style for Experience and Education */
-/* General Box Style */
-.about__details-container-box, .about__text-container {
-    background-color: #f9f9f9;
+.about__details-container-box {
+    background-color: white;
     border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    width: 48%;
-    display: flex;
-    flex: 1; /* Ensures both boxes take equal width */
+    border-radius: 10px;
+    padding: 15px;
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    min-height: 100%; /* Makes both sections equal in height */
-    padding: 20px;
-    background-color: white; /* Adjust background if necessary */
-    border-radius: 10px; /* Optional: Gives rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
-  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-/* Hover effect for Experience, Education, and About Text Boxes */
-.about__details-container-box:hover, .about__text-container:hover {
-    animation: none; /* Remove shake animation */
-    transform: translateY(-5px); /* Move up slightly */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
-}
-
-/* Optional: Hover effect for Experience and Education Titles */
-.about__heading-with-icon:hover {
-    cursor: pointer;
-}
-
-/* Optional: Adjust text container style */
-.about__text-container {
-    width: 100%; /* Ensure the text container spans full width */
-}
-
-/* Optional: Hover effect for the Passionate Section (Text Box) */
-.about__text-container:hover {
-    cursor: pointer; /* Add pointer cursor to indicate interactivity */
-}
-
-
-
 
 .about__heading-with-icon {
     display: flex;
     align-items: center;
-    margin-bottom: 2px;
-    gap: 10px;  /* Space between icon and heading */
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
 .about__icon {
@@ -423,62 +377,58 @@ body {
 }
 
 .about__details-container-box h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: #333;
+    margin: 0;
 }
 
 .about__experience-list, .about__education-list {
     list-style: none;
     padding-left: 0;
+    margin: 0;
 }
 
-.about__experience-list li, {
-    margin-bottom: 0px;
-    line-height: 1.2px;
-    padding-bottom: 0px; /* Add some padding at bottom */
-    border-bottom: 2px solid #eee;
+.about__experience-list li {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
 }
+
 .about__education-list li {
-    margin-bottom: 0px; /* Reduced spacing */
-    line-height: 0.5px;
-    padding-bottom: 0px; /* Add some padding at bottom */
-    border-bottom: 2px solid #eee;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
 }
 
-.about__experience-list li strong {
-    display: block;  /* Job titles appear below the company name */
-    margin-top: 0px;
-    margin-bottom: 0px;
-    font-size: 0.9rem;
-    line-height: 1.3;
+.about__experience-list li:last-child,
+.about__education-list li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
 }
+
+.about__experience-list li strong,
 .about__education-list li strong {
-    display: block;  
-    font-size: 0.9rem;
-    line-height: 1.3;
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
+    display: block;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-top: 5px;
+}
 
 .about__duration {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #888;
-    margin-top: 2px; 
+    display: block;
+    margin-top: 3px;
 }
 
-/* Text Container (About Text) */
-.about__text-container {
-    margin-top: 20px;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-}
-
-.about__text-container p {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: #333;
+/* About Me text styling */
+.about__education-list li:first-child {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    border-bottom: none;
+    padding-bottom: 0;
 }
 
 /* Responsive Design */
@@ -490,15 +440,19 @@ body {
 
     .about__pic-container {
         margin-bottom: 20px;
+        flex-basis: auto;
+        width: 100%;
+        max-width: 300px;
     }
 
     .about__details-container {
         width: 100%;
+        flex-basis: auto;
     }
 
     .about__info-containers {
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
     }
 
     .about__details-container-box {
