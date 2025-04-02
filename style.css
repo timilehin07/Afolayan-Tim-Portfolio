@@ -413,7 +413,7 @@ body {
 .about__heading-with-icon {
     display: flex;
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
     gap: 10px;  /* Space between icon and heading */
 }
 
@@ -434,13 +434,13 @@ body {
 
 .about__experience-list li, {
     margin-bottom: 0px;
-    line-height: 1.2;
+    line-height: 1.2px;
     padding-bottom: 0px; /* Add some padding at bottom */
     border-bottom: 2px solid #eee;
 }
 .about__education-list li {
-    margin-bottom: 5px; /* Reduced spacing */
-    line-height: 1.4;
+    margin-bottom: 0px; /* Reduced spacing */
+    line-height: 0px;
     padding-bottom: 0px; /* Add some padding at bottom */
     border-bottom: 2px solid #eee;
 }
