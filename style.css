@@ -440,7 +440,7 @@ body {
 }
 .about__education-list li {
     margin-bottom: 0px; /* Reduced spacing */
-    line-height: 0px;
+    line-height: 0.5px;
     padding-bottom: 0px; /* Add some padding at bottom */
     border-bottom: 2px solid #eee;
 }
