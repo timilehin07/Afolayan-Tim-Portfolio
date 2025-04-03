@@ -290,7 +290,7 @@ section {
 
 
 
-//* About Section Styling */
+/* About Section Styling */
 #about {
     padding: 50px;
     background-color: #fff;
@@ -423,12 +423,85 @@ section {
 }
 
 /* About Me text styling */
-.about__education-list li:first-child {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin-bottom: 15px;
-    border-bottom: none;
+/* About Section Styling */
+#about {
+    padding: 40px 50px;
+    background-color: #fff;
+    border-radius: 8px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Experience List Styling */
+.about__experience-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about__experience-list li {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.about__experience-list li:last-child {
+    margin-bottom: 0;
     padding-bottom: 0;
+    border-bottom: none;
+}
+
+.about__experience-list li strong,
+.about__experience-list li span {
+    display: block;
+    line-height: 1.4;
+}
+
+.about__experience-list li strong {
+    font-size: 0.95rem;
+    margin-bottom: 2px;
+}
+
+.about__experience-list li span {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.about__duration {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 2px;
+}
+
+/* About Me Text */
+.about__me-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Education List */
+.about__education-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+}
+
+.about__education-list li {
+    margin-bottom: 10px;
+}
+
+.about__education-list li strong {
+    font-size: 0.95rem;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.about__education-list li span {
+    font-size: 0.9rem;
+    color: #555;
+    display: block;
 }
 
 /* Responsive Design */
