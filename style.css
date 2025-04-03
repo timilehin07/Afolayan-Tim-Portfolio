@@ -513,25 +513,21 @@ section {
 
     .about__pic-container {
         margin-bottom: 20px;
-        flex-basis: auto;
-        width: 100%;
-        max-width: 300px;
     }
 
     .about__details-container {
         width: 100%;
-        flex-basis: auto;
     }
 
     .about__info-containers {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
     }
 
     .about__details-container-box {
         width: 100%;
     }
-}
+
 
 
 
