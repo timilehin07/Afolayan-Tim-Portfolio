@@ -503,7 +503,13 @@ section {
     color: #555;
     display: block;
 }
-
+/* Certificate Heading */
+.certificate-heading {
+    font-size: 1.1rem;
+    margin: 15px 0 10px 0;
+    color: #333;
+    font-weight: 600;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .about__section-container {
