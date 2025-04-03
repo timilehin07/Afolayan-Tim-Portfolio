@@ -1,0 +1,548 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+
+@media screen and (max-width: 1400px) {
+  #profile {
+    height: 83vh;
+    margin-bottom: 6rem;
+  }
+  .about-containers {
+    flex-wrap: wrap;
+  }
+  #contact,
+  #projects {
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none;
+  }
+  #hamburger-nav {
+    display: flex;
+  }
+  #experience,
+  .experience-details-container {
+    margin-top: 2rem;
+  }
+  .experience-item {
+  display: inline-block;
+  width: 45%; /* Adjust the width as needed */
+  margin-right: 10%; /* Add space between the items */
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+  #profile,
+  .section-container {
+    display: block;
+  }
+  .arrow {
+    display: none;
+  }
+  section,
+  .section-container {
+    height: fit-content;
+  }
+  section {
+    margin: 0 5%;
+  }
+  .section__pic-container {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem;
+  }
+  
+}
+
+@media screen and (max-width: 600px) {
+  #contact,
+  footer {
+    height: 40vh;
+  }
+  .article-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row on medium screens */
+  }
+  #profile {
+    height: 83vh;
+    margin-bottom: 0;
+  }
+  article {
+    font-size: 1rem;
+  }
+  footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+  
+  .contact-info-upper-container,
+  .btn-container {
+    flex-wrap: wrap;
+  }
+  .contact-info-container {
+    margin: 0;
+  }
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 1rem;
+  }
+  .experience-sub-title {
+    font-size: 1.25rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .section__pic-container {
+    width: auto;
+    height: 46vw;
+    justify-content: center;
+  }
+  .section__text__p2 {
+    font-size: 1.25rem;
+  }
+  }
+  .title {
+    font-size: 3rem;
+  }
+  .text-container {
+    text-align: justify;
+  }
+}
+
+
+
+/* Optional: styling for the h3 and p text */
+h3, p {
+  margin: 0;
+}
+
+/* Add margin to the top of the #experience section */
+#experience {
+  margin-top: 70px; /* Adjust the value as needed */
+}
+
+/* Optionally, add margin to the image if you want more space */
+.arrow {
+  margin-top: 30px; /* Adjust the value as needed */
+}
+
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Add space between projects */
+  justify-content: space-between; /* Ensure even spacing */
+}
+
+
+.details-container {
+  display: flex;
+  flex-direction: column; /* Keeps content vertical */
+  align-items: center; /* Center-aligns the content */
+  text-align: center; /* Ensures text is centered */
+  padding: 15px;
+  border: 1px solid #ddd; /* Optional: Adds a border to match the look */
+  border-radius: 10px; /* Optional: Softens edges */
+  width: 250px; /* Controls container width */
+}
+
+
+.article-container {
+  margin-bottom: 10px; /* Space between image and text */
+}
+
+.project-title {
+  text-align: center;
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-bottom {
+  margin-top: auto; /* This moves the button to the bottom of the container */
+}
+
+.project-btn {
+  padding: 10px 20px;
+  background-color: #2c3e50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.project-btn:hover {
+  background-color: #34495e;
+}
+
+
+
+
+/* Scroll-to-Top Button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none; /* Hidden by default */
+  background-color: black; /* Change to black */
+  color: #fff; /* Keep the text/icon color white for contrast */
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-to-top.show {
+  display: block; /* Show the button */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-to-top.hide {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+
+/* Container for all the skills */
+.article-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+  gap: 3rem; /* Increased space between items */
+  justify-items: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  text-align: center; /* Align text in the center */
+  padding: 20px; /* Add some padding around the grid container */
+}
+
+/* Each skill article */
+.article-container article {
+  background-color: #f9f9f9; /* Optional background color */
+  padding: 25px; /* Increased padding inside each item */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease; /* Hover effect */
+  max-width: 220px; /* Slightly increase max width */
+  width: 90%; /* Ensure full responsiveness */
+}
+
+/* Hover effect for each item */
+.article-container article:hover {
+  transform: translateY(-5px); /* Slight hover effect */
+}
+
+/* Icon styles */
+.icon {
+  width: 45px; /* Adjust size */
+  height: 45px;
+  margin-bottom: 15px; /* More space between the icon and text */
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .article-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row on medium screens */
+  }
+}
+
+
+
+/* General section styling */
+#my-projects {
+  padding: 40px 20px;
+  text-align: center; /* Centering the heading */
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center; /* Keep the heading centered */
+}
+
+.section__text__p1 {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Container for projects */
+.projects__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centering the items */
+  gap: 20px;
+}
+
+/* Each project item */
+.projects__item {
+  width: calc(50% - 10px); /* Two items per row, 10px gap between */
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures the button stays at the bottom */
+   height: 450px; /* <-- Set a consistent height for all project items */
+  overflow: hidden; /* To handle content overflow */
+}
+
+/* Hover effect for the project items */
+.projects__item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image container */
+
+
+
+.projects__image-container {
+  position: relative;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height relative to the parent */
+  max-width: 100%; /* Ensure it doesn't stretch beyond parent width */
+  overflow: hidden; /* Hide anything out of view */
+  border-radius: 8px; /* Optional: rounded corners */
+}
+
+/* Slider container should take full width */
+.slider {
+  display: flex;
+  transition: transform 0.5s ease; /* Smooth transition for shifting slides */
+  width: 50%; /* Full width of the parent container */
+  height: 100%; /* Full height of the parent container */
+  overflow: show; 
+}
+
+/* Each slide should occupy full width and height */
+.slide {
+  width: 100%; /* Ensure each slide takes full width of the slider */
+  height: 100%; /* Make slides take the full height of the container */
+  object-fit: contain; /* Preserve image aspect ratio */
+  flex-shrink: 0; /* Prevent images from shrinking */
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+}
+
+
+
+
+
+/* Previous and Next button positioning */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 100;
+  font-size: 20px;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+
+/* Making the project images responsive */
+.projects__image {
+  width: 100%; /* Stretch image to fill the width of the container */
+  height: 100%; /* Stretch image to fill the height of the container */
+  object-fit: contain; 
+}
+
+.projects__image-1 {
+  max-width: 100%;
+  height: 350px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Subtitle */
+.projects__subtitle {
+  font-size: 1.1rem;
+  margin: 15px 0;
+  text-align: center;
+}
+
+/* Button container */
+.projects__button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: auto; /* Push the button to the bottom of the container */
+  margin-bottom: 10px;
+}
+
+/* Styling for the Github button */
+.projects__button {
+  background-color: #000000; /* Set the button background color to black */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block; /* Ensure it remains on a new line */
+  width: 100%; /* Button spans full width */
+  max-width: 200px; /* Limit width */
+  margin: 0 auto; /* Centers the button horizontally */
+}
+
+/* Button hover effect */
+.projects__button:hover {
+  background-color: #333333; /* Darker shade of black for hover effect */
+}
+
+/* Ensure all button containers have consistent alignment */
+.projects__button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+
+
+
+
+/* Project Row - 2 projects per row */
+.projects__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Ensuring a gap between rows */
+.projects__container > .projects__row:not(:last-child) {
+  margin-bottom: 20px;
+}
+/* Each project item */
+.projects__item {
+  width: calc(50% - 10px); /* Two items per row, 10px gap between */
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 750px; /* <-- Set a consistent height for all project items */
+  overflow: hidden; /* To handle content overflow */
+}
+
+
+@media (max-width: 992px) {
+  .projects__row {
+    display: flex;
+    flex-direction: column; /* Force all items into a single column */
+    gap: 20px;             /* Add spacing between items */
+  }
+
+  .projects__item {
+    width: 100%;            /* Full width of the parent container */
+    margin-bottom: 20px;    /* Add spacing between items */
+    height: auto;           /* Let the height adjust dynamically */
+  }
+
+  .projects__image-container {
+    width: 100%;            /* Ensure the image fits the container */
+    height: auto;           /* Maintain aspect ratio */
+  }
+
+  .projects__image {
+    width: 100%;            /* Ensure the image scales properly */
+    object-fit: cover;      /* Prevent distortion of images */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .section__pic-container {
+    width: auto;              /* Adjust width automatically */
+    height: auto;             /* Let height adjust dynamically */
+    margin: 0 auto;           /* Center the image */
+  }
+
+  .profile-img {
+    border-radius: 50%;       /* Make the image circular */
+    width: 160px;             /* Set a specific width for phones */
+    height: 180px;            /* Match height to width for a circle */
+    object-fit: cover;        /* Ensure the image fits within the circle */
+    display: block;           /* Center-align if necessary */
+    margin: 0 auto;           /* Center the image */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .section__text__p2 {
+           
+    margin-top: 0.25rem;    /* Reduce the top margin */
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.5rem;      /* Slightly smaller font for mobile */
+    margin-bottom: 1rem;    /* Adjust spacing for mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  .typing-text{
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #profile {
+    margin-bottom: 2rem; /* Reduce space for mobile */
+  }
+
+  #about {
+    margin-top: 0.5rem;  /* Reduce space for mobile */
+    padding-top: 1rem;   /* Adjust padding as needed */
+  }
+}
