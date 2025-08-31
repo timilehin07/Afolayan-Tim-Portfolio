@@ -5,9 +5,11 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-body {font-family: "Poppins", sans-serif;
+body {
+  font-family: "Poppins", sans-serif;
 }
 
 html {
@@ -208,19 +210,15 @@ section {
   display: inline-block; /* Ensures it stays inline with other elements */
 }
 
-
-
 /* Styling for the titles (below the main name) */
 .section__text__p2 {
-  font-size: 1.0rem;      /* Adjust size for better distinction */
-  color: #555;           /* Use a subtle gray color to contrast */
-  font-style: italic;    /* Optional: Add an italic style for emphasis */
-  text-transform: none;  /* Ensure no unnecessary capitalization */
-  margin-top: 1rem;    /* Add space from the main title */
+  font-size: 1.0rem; /* Adjust size for better distinction */
+  color: #555; /* Use a subtle gray color to contrast */
+  font-style: italic; /* Optional: Add an italic style for emphasis */
+  text-transform: none; /* Ensure no unnecessary capitalization */
+  margin-top: 1rem; /* Add space from the main title */
   margin-bottom: 1rem;
 }
-
-
 
 /* Title styling */
 .title {
@@ -233,9 +231,18 @@ section {
 /* Social icons container */
 #socials-container {
   display: flex;
+  flex-direction: column; /* Stack items vertically instead of horizontally */
+  align-items: center; /* Center items horizontally */
   justify-content: center;
   margin-top: 1rem;
   gap: 1rem;
+}
+
+/* Added styling for social icons row to keep icons together */
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
 }
 
 /* ICONS */
@@ -287,224 +294,214 @@ section {
   border: rgb(255, 255, 255) 0.1rem solid;
 }
 
-
-
-
-/* ABOUT SECTION *//* Reset some default styles */
+/* ABOUT SECTION */ /* Reset some default styles */
 /* Reset some default styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Overall styling */
 body {
-    background-color: #f4f4f4;
-    color: #333;
-  }
-    
+  background-color: #f4f4f4;
+  color: #333;
+}
 
 /* About Section Styling */
 #about {
-    padding: 50px;
-    background-color: #fff;
-    border-radius: 8px;
-    max-width: 1200px;
-    margin: 50px auto;
-    margin-top: 0rem;
+  padding: 50px;
+  background-color: #fff;
+  border-radius: 8px;
+  max-width: 1200px;
+  margin: 50px auto;
+  margin-top: 0rem;
 }
 
 /* Introduction Text */
 .about__intro-text {
-    font-size: 0.9rem;
-    color: #888;
-    text-align: center;
+  font-size: 0.9rem;
+  color: #888;
+  text-align: center;
 }
 
 .about__title {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-top: 10px;
-    color: #333;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 10px;
+  color: #333;
 }
 
 /* Section Container (for image and details) */
 .about__section-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 30px;
 }
 
 /* Picture Container */
 .about__pic-container {
-    flex-basis: 30%;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
+  flex-basis: 30%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
 }
 
 .about__pic {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
 /* Details Container (Experience & Education) */
 .about__details-container {
-    flex-basis: 65%;
+  flex-basis: 65%;
 }
 
 /* Info Containers for Experience and Education */
 .about__info-containers {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-  
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 /* Box Style for Experience and Education */
 /* General Box Style */
-.about__details-container-box, .about__text-container {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    width: 48%;
-    display: flex;
-    flex: 1; /* Ensures both boxes take equal width */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 100%; /* Makes both sections equal in height */
-    padding: 20px;
-    background-color: white; /* Adjust background if necessary */
-    border-radius: 10px; /* Optional: Gives rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
-  
+.about__details-container-box,
+.about__text-container {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 48%;
+  display: flex;
+  flex: 1; /* Ensures both boxes take equal width */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%; /* Makes both sections equal in height */
+  padding: 20px;
+  background-color: white; /* Adjust background if necessary */
+  border-radius: 10px; /* Optional: Gives rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
 }
 
 /* Hover effect for Experience, Education, and About Text Boxes */
-.about__details-container-box:hover, .about__text-container:hover {
-    animation: none; /* Remove shake animation */
-    transform: translateY(-5px); /* Move up slightly */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+.about__details-container-box:hover,
+.about__text-container:hover {
+  animation: none; /* Remove shake animation */
+  transform: translateY(-5px); /* Move up slightly */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
 }
 
 /* Optional: Hover effect for Experience and Education Titles */
 .about__heading-with-icon:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 /* Optional: Adjust text container style */
 .about__text-container {
-    width: 100%; /* Ensure the text container spans full width */
+  width: 100%; /* Ensure the text container spans full width */
 }
 
 /* Optional: Hover effect for the Passionate Section (Text Box) */
 .about__text-container:hover {
-    cursor: pointer; /* Add pointer cursor to indicate interactivity */
+  cursor: pointer; /* Add pointer cursor to indicate interactivity */
 }
 
-
-
-
 .about__heading-with-icon {
-    display: flex;
-    align-items: center;
-    gap: 10px;  /* Space between icon and heading */
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between icon and heading */
 }
 
 .about__icon {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
 .about__details-container-box h3 {
-    font-size: 1.5rem;
-    color: #333;
+  font-size: 1.5rem;
+  color: #333;
 }
 
-.about__experience-list, .about__education-list {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
+.about__experience-list,
+.about__education-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
 .about__experience-list li {
-    margin-bottom: 15px;
-    line-height: 1.2;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #eee;
+  margin-bottom: 15px;
+  line-height: 1.2;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
 }
 .about__education-list li {
-    margin-bottom: 15px;
-    line-height: 1.2;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #eee;
+  margin-bottom: 15px;
+  line-height: 1.2;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
 }
 
 .about__experience-list li strong {
-    display: block;  /* Job titles appear below the company name */
-    margin-top: 0px;
-    margin-bottom: 0px;
-    font-size: 0.9rem;
+  display: block; /* Job titles appear below the company name */
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 0.9rem;
 }
 .about__education-list li strong {
-    font-size: 0.9rem;
-  }
+  font-size: 0.9rem;
+}
 
 .about__duration {
-    font-size: 0.85rem;
-    color: #888;
-    display: block;
-    margin-top: 3px; 
+  font-size: 0.85rem;
+  color: #888;
+  display: block;
+  margin-top: 3px;
 }
 
 /* Text Container (About Text) */
 .about__text-container {
-    margin-top: 20px;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
 }
 
 .about__text-container p {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: #333;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #333;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .about__section-container {
-        flex-direction: column;
-        align-items: center;
-    }
+  .about__section-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .about__pic-container {
-        margin-bottom: 20px;
-    }
+  .about__pic-container {
+    margin-bottom: 20px;
+  }
 
-    .about__details-container {
-        width: 100%;
-    }
+  .about__details-container {
+    width: 100%;
+  }
 
-    .about__info-containers {
-        flex-direction: column;
-        gap: 10px;
-    }
+  .about__info-containers {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-    .about__details-container-box {
-        width: 100%;
-    }
+  .about__details-container-box {
+    width: 100%;
+  }
 }
-
-
-
-
 
 /* EXPERIENCE SECTION */
 
@@ -569,8 +566,6 @@ body {
   }
 }
 
-
-
 /* PROJECTS SECTION */
 
 /* General section styling */
@@ -613,7 +608,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Ensures the button stays at the bottom */
-   height: 450px; /* <-- Set a consistent height for all project items */
+  height: 450px; /* <-- Set a consistent height for all project items */
   overflow: hidden; /* To handle content overflow */
 }
 
@@ -636,7 +631,6 @@ body {
   min-height: 100%; /* Ensure minimum height fills container */
 }
 
-
 .projects__video:hover {
   transform: scale(1.05);
 }
@@ -653,8 +647,6 @@ body {
 
 /* Image container */
 
-
-
 .projects__image-container {
   position: relative;
   width: 100%; /* Full width */
@@ -670,7 +662,7 @@ body {
   transition: transform 0.5s ease; /* Smooth transition for shifting slides */
   width: 50%; /* Full width of the parent container */
   height: 100%; /* Full height of the parent container */
-  overflow: show; 
+  overflow: show;
 }
 
 /* Each slide should occupy full width and height */
@@ -684,12 +676,9 @@ body {
   align-items: center; /* Center the image vertically */
 }
 
-
-
-
-
 /* Previous and Next button positioning */
-.prev, .next {
+.prev,
+.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -711,17 +700,16 @@ body {
   right: 10px;
 }
 
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
-
-
 
 /* Making the project images responsive */
 .projects__image {
   width: 100%; /* Stretch image to fill the width of the container */
   height: 100%; /* Stretch image to fill the height of the container */
-  object-fit: contain; 
+  object-fit: contain;
 }
 
 .projects__image-1 {
@@ -773,8 +761,6 @@ body {
   margin-top: 10px;
 }
 
-
-
 /* CONTACT */
 
 #contact {
@@ -790,7 +776,7 @@ body {
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
+  background: rgb(250, 250, 250);
   margin: 2rem auto;
   padding: 0.5rem;
 }
@@ -870,8 +856,3 @@ footer p {
     grid-template-columns: 1fr; /* 1 item per row on small screens */
   }
 }
-
-
-
-
-
