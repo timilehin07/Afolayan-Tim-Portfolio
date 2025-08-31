@@ -622,6 +622,31 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
+.projects__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center; /* Changed from center left to center to show middle part of video */
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
+  display: block;
+  background: #000;
+  min-width: 100%; /* Ensure minimum width fills container */
+  min-height: 100%; /* Ensure minimum height fills container */
+}
+
+
+.projects__video:hover {
+  transform: scale(1.05);
+}
+
+.projects__subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: rgb(53, 53, 53);
+}
+
 .projects__row {
   display: contents; /* This makes the row wrapper invisible to the grid */
 }
