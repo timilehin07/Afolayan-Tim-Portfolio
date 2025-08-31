@@ -442,13 +442,7 @@ h3, p {
 
 
 
-/* Project Row - 2 projects per row */
-.projects__row {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  width: 100%;
-}
+
 
 /* Ensuring a gap between rows */
 .projects__container > .projects__row:not(:last-child) {
