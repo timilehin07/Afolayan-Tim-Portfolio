@@ -14,11 +14,11 @@ class Portfolio3DEnhancer {
     this.currentRotation = { x: 0, y: 0 };
 
     this.config = {
-      shapeCount: window.innerWidth < 768 ? 20 : 35,
-      particleCount: window.innerWidth < 768 ? 250 : 500,
-      spawnRange: { x: 120, y: 100, z: 150 },
+      shapeCount: 70, // more shapes
+      particleCount: 1200, // more stars
+      spawnRange: { x: 120, y: 100, z: 150 }, // closer range
       colors: {
-        star: 0x000000, // black particles
+        star: 0x000000,
         glow1: 0xff0000,
         glow2: 0x00ffcc,
         glow3: 0x0000ff,
@@ -58,13 +58,13 @@ class Portfolio3DEnhancer {
 
   createScene() {
     this.scene = new THREE.Scene();
-    this.scene.background = new THREE.Color(0xf0f0f0); // light gray
+    this.scene.background = new THREE.Color(0xf0f0f0); // gray bg
   }
 
   createCamera() {
     const aspect = window.innerWidth / window.innerHeight;
-    this.camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 1000);
-    this.camera.position.set(0, 0, 30);
+    this.camera = new THREE.PerspectiveCamera(70, aspect, 0.1, 1000);
+    this.camera.position.set(0, 0, 80); // closer view
   }
 
   createRenderer() {
@@ -92,21 +92,21 @@ class Portfolio3DEnhancer {
   }
 
   createLighting() {
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
     this.scene.add(ambientLight);
 
-    const pointLight = new THREE.PointLight(0xffffff, 1.2, 300);
-    pointLight.position.set(0, 80, 80);
+    const pointLight = new THREE.PointLight(0xffffff, 1.5, 400);
+    pointLight.position.set(0, 50, 100);
     this.scene.add(pointLight);
   }
 
   createShapes() {
     const geometries = [
-      new THREE.TorusGeometry(2, 0.6, 16, 100), // spaceship ring
-      new THREE.TorusKnotGeometry(1.6, 0.4, 120, 20), // spaceship core
-      new THREE.DodecahedronGeometry(1.8),
-      new THREE.ConeGeometry(1.2, 3, 16), // rocket-like
-      new THREE.BoxGeometry(1.5, 1.5, 1.5)
+      new THREE.TorusGeometry(2, 0.6, 16, 60),
+      new THREE.TorusKnotGeometry(1.5, 0.5, 200, 30),
+      new THREE.ConeGeometry(2, 4, 16),
+      new THREE.DodecahedronGeometry(2),
+      new THREE.BoxGeometry(2, 2, 2)
     ];
 
     for (let i = 0; i < this.config.shapeCount; i++) {
@@ -126,32 +126,50 @@ class Portfolio3DEnhancer {
         (Math.random() - 0.5) * this.config.spawnRange.y,
         (Math.random() - 0.5) * this.config.spawnRange.z
       );
+
+      shape.userData = {
+        floatSpeed: 0.5 + Math.random() * 1,
+        floatRange: 6 + Math.random() * 5,
+        initialY: shape.position.y,
+        driftX: (Math.random() - 0.5) * 0.03,
+        driftZ: (Math.random() - 0.5) * 0.03
+      };
+
       this.scene.add(shape);
       this.shapes.push(shape);
     }
   }
 
   createWorlds() {
-    // Simple planets using textures
     const loader = new THREE.TextureLoader();
     const textures = [
       "https://threejs.org/examples/textures/planets/earth_atmos_2048.jpg",
       "https://threejs.org/examples/textures/planets/mars_1024.jpg",
-      "https://threejs.org/examples/textures/planets/jupiter2_1024.jpg"
+      "https://threejs.org/examples/textures/planets/jupiter2_1024.jpg",
+      "https://threejs.org/examples/textures/planets/venus.jpg"
     ];
 
-    textures.forEach((texUrl, i) => {
+    textures.forEach(texUrl => {
       loader.load(texUrl, texture => {
         const material = new THREE.MeshStandardMaterial({ map: texture });
         const sphere = new THREE.Mesh(
-          new THREE.SphereGeometry(4, 32, 32),
+          new THREE.SphereGeometry(5, 32, 32),
           material
         );
         sphere.position.set(
           (Math.random() - 0.5) * 100,
-          (Math.random() - 0.5) * 60,
-          (Math.random() - 0.5) * 80
+          (Math.random() - 0.5) * 80,
+          (Math.random() - 0.5) * 120
         );
+
+        sphere.userData = {
+          floatSpeed: 0.2 + Math.random() * 0.5,
+          floatRange: 12 + Math.random() * 6,
+          initialY: sphere.position.y,
+          driftX: (Math.random() - 0.5) * 0.02,
+          driftZ: (Math.random() - 0.5) * 0.02
+        };
+
         this.scene.add(sphere);
         this.shapes.push(sphere);
       });
@@ -167,9 +185,9 @@ class Portfolio3DEnhancer {
 
     const color = new THREE.Color();
     for (let i = 0; i < particleCount; i++) {
-      positions[i * 3] = (Math.random() - 0.5) * 500;
-      positions[i * 3 + 1] = (Math.random() - 0.5) * 500;
-      positions[i * 3 + 2] = (Math.random() - 0.5) * 500;
+      positions[i * 3] = (Math.random() - 0.5) * 600;
+      positions[i * 3 + 1] = (Math.random() - 0.5) * 600;
+      positions[i * 3 + 2] = (Math.random() - 0.5) * 600;
 
       color.setHex(this.config.colors.star);
       colors[i * 3] = color.r;
@@ -185,7 +203,6 @@ class Portfolio3DEnhancer {
 
     const particleMaterial = new THREE.PointsMaterial({
       size: 2,
-      sizeAttenuation: true,
       vertexColors: true,
       transparent: true,
       opacity: 0.9
@@ -247,8 +264,16 @@ class Portfolio3DEnhancer {
     const time = performance.now() * 0.001;
 
     this.shapes.forEach(shape => {
-      shape.rotation.x += 0.005;
-      shape.rotation.y += 0.01;
+      shape.rotation.x += 0.003;
+      shape.rotation.y += 0.004;
+
+      if (shape.userData) {
+        shape.position.y =
+          shape.userData.initialY +
+          Math.sin(time * shape.userData.floatSpeed) * shape.userData.floatRange;
+        shape.position.x += shape.userData.driftX;
+        shape.position.z += shape.userData.driftZ;
+      }
     });
 
     this.camera.rotation.x += (this.targetRotation.x - this.currentRotation.x) * 0.05;
