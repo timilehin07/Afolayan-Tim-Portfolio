@@ -14,8 +14,8 @@ class Portfolio3DEnhancer {
     this.currentRotation = { x: 0, y: 0 };
 
     this.config = {
-      shapeCount: 70, // more shapes
-      particleCount: 1200, // more stars
+      shapeCount: 50, // more shapes
+      particleCount: 850, // more stars
       spawnRange: { x: 120, y: 100, z: 150 }, // closer range
       colors: {
         star: 0x000000,
@@ -292,3 +292,4 @@ if (document.readyState === "loading") {
 } else {
   setTimeout(init3DEnhancement, 100);
 }
+
